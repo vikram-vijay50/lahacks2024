@@ -1,42 +1,31 @@
-```json
 {
   "repeated_behaviors": [
     {
-      "timestamp": "00:22",
-      "behavior": "Head Scratching",
-      "description": "The man in the video scratches his head with his right hand."
+      "timestamp": "00:01:15",
+      "behavior": "Scratching head",
+      "description": "The subject repeatedly scratches their head with their right hand for approximately 5 seconds."
     },
     {
-      "timestamp": "00:31",
-      "behavior": "Bending Over",
-      "description": "The woman in the video bends over with her head between her knees."
+      "timestamp": "00:02:45",
+      "behavior": "Tapping foot",
+      "description": "The subject begins tapping their right foot rapidly on the floor. This behavior continues intermittently for the next minute."
     },
     {
-      "timestamp": "00:34",
-      "behavior": "Holding Lower Back",
-      "description": "The woman in the video places both of her hands on her lower back, as if she is in pain."
+      "timestamp": "00:05:32",
+      "behavior": "Looking around",
+      "description": "The subject abruptly stops speaking and begins looking around the room in a seemingly anxious manner. This lasts for about 10 seconds before they resume speaking."
+    } 
+  ],
+  "abnormal_behaviors": [
+    {
+      "timestamp": "00:07:58",
+      "behavior": "Talking to self",
+      "description": "The subject appears to be talking to themself in hushed tones. It is unclear what they are saying, but the behavior seems unusual in the context of the video."
     },
     {
-      "timestamp": "00:39",
-      "behavior": "Bending Over",
-      "description": "The woman in the video bends over and touches her toes, as if she is stretching."
-    },
-    {
-      "timestamp": "00:43",
-      "behavior": "Holding Lower Back",
-      "description": "The woman in the video places both of her hands on her lower back, as if she is in pain."
-    },
-    {
-      "timestamp": "00:46",
-      "behavior": "Holding Head",
-      "description": "The woman in the video holds her head with both hands, as if she has a headache."
-    },
-    {
-      "timestamp": "00:50",
-      "behavior": "Bending Over",
-      "description": "The woman in the video bends over with her head between her knees."
+      "timestamp": "00:10:21",
+      "behavior": "Laughing inappropriately",
+      "description": "The subject bursts into laughter at a seemingly inappropriate moment. There is no apparent trigger for this laughter." 
     }
   ]
 }
-``` 
-It's important to note that these behaviors may not necessarily be indicative of any underlying medical or psychological conditions. If you are concerned about someone's behavior, it's always best to consult with a qualified healthcare professional. 

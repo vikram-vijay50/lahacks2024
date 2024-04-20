@@ -1,0 +1,34 @@
+{
+"repeated_behaviors": [
+    {
+        "timestamp": "00:01:15",
+        "behavior": "Scratching head",
+        "description": "The subject rapidly scratches their head with their right hand for approximately 5 seconds." 
+    },
+    {
+        "timestamp": "00:03:52",
+        "behavior": "Looking around",
+        "description": "The subject quickly glances around the room in a seemingly nervous manner, avoiding direct eye contact with the camera."
+    },
+    {
+        "timestamp": "00:05:08",
+        "behavior": "Tapping foot", 
+        "description": "The subject begins tapping their right foot on the floor rhythmically. This behavior continues intermittently for the next 2 minutes."
+    },
+    {
+        "timestamp": "00:07:33",
+        "behavior": "Biting nails",
+        "description": "The subject brings their left hand to their mouth and begins biting their nails. This behavior lasts for approximately 10 seconds."
+    },
+    {
+        "timestamp": "00:09:41",
+        "behavior": "Fidgeting with hands",
+        "description": "The subject interlaces their fingers and twists them together repeatedly, demonstrating restlessness."
+    },
+    {
+        "timestamp": "00:12:24", 
+        "behavior": "Clearing throat",
+        "description": "The subject clears their throat loudly several times in quick succession."
+    }
+  ]
+} 
