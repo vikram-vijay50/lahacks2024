@@ -62,7 +62,6 @@ def extract_frame_from_video(video_file_path):
   create_frame_output_dir(FRAME_EXTRACTION_DIRECTORY)
   vidcap = cv2.VideoCapture(video_file_path)
   fps = vidcap.get(cv2.CAP_PROP_FPS)
-  frame_duration = 1 / fps  # Time interval between frames (in seconds)
   output_file_prefix = os.path.basename(video_file_path).replace('.', '_')
   frame_count = 0
   count = 0

@@ -7,6 +7,9 @@ import reflex as rx
 
 from response_gen import gen_response
 
+import os
+import shutil
+
 class State(rx.State):
     """The app state."""
 
@@ -14,6 +17,9 @@ class State(rx.State):
     img: list[str]
 
     async def handle_upload(self, files: list[rx.UploadFile]):
+        directory_path = rx.get_upload_dir()
+        shutil.rmtree(directory_path)
+        
         for file in files:
             upload_data = await file.read()
             outfile = rx.get_upload_dir() / file.filename

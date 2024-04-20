@@ -43,7 +43,7 @@ def dashboard() -> rx.Component:
         The UI for the dashboard page.
     """
     # Video path & component
-    video_path = "/TouretteTics.mp4"
+    video_path = "/TouretteTics2.mp4"
     video_component = rx.vstack(
             rx.heading("Video", size="8"),
             rx.video(
