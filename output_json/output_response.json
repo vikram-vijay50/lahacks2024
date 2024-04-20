@@ -1,0 +1,92 @@
+```json
+{
+  "repeated_behaviors": [
+    {
+      "timestamp": "00:22",
+      "behavior": "Head Scratching",
+      "description": "The man in the video scratches his head with his right hand."
+    },
+    {
+      "timestamp": "00:31",
+      "behavior": "Bending Forward",
+      "description": "The woman in the video bends forward at the waist."
+    },
+    {
+      "timestamp": "00:34",
+      "behavior": "Holding Lower Back",
+      "description": "The woman in the video places both hands on her lower back."
+    },
+    {
+      "timestamp": "00:35",
+      "behavior": "Rubbing Eyes",
+      "description": "The woman in the video rubs her eyes with her right hand."
+    }, 
+    {
+      "timestamp": "00:36",
+      "behavior": "Touching Hair",
+      "description": "The woman in the video touches her hair with her right hand."
+    },
+    {
+      "timestamp": "00:38",
+      "behavior": "Walking",
+      "description": "The woman walks across the room." 
+    },
+    {
+      "timestamp": "00:39",
+      "behavior": "Bending Forward",
+      "description": "The woman in the video bends forward at the waist."
+    },
+    {
+      "timestamp": "00:42",
+      "behavior": "Walking",
+      "description": "The woman walks across the room." 
+    },
+    {
+      "timestamp": "00:43",
+      "behavior": "Holding Lower Back",
+      "description": "The woman in the video places both hands on her lower back."
+    },
+    {
+      "timestamp": "00:44",
+      "behavior": "Holding Lower Back",
+      "description": "The woman in the video places both hands on her lower back."
+    },
+    {
+      "timestamp": "00:45",
+      "behavior": "Holding Knees",
+      "description": "The woman in the video places both hands on her knees."
+    },
+    {
+      "timestamp": "00:46",
+      "behavior": "Holding Knees",
+      "description": "The woman in the video places both hands on her knees."
+    },
+    {
+      "timestamp": "00:47",
+      "behavior": "Holding Head",
+      "description": "The woman places both hands on her head." 
+    },
+    {
+      "timestamp": "00:48",
+      "behavior": "Touching Hair",
+      "description": "The woman in the video touches her hair with her right hand." 
+    },
+    {
+      "timestamp": "00:49",
+      "behavior": "Bending Forward",
+      "description": "The woman in the video bends forward at the waist."
+    },
+    {
+      "timestamp": "00:50",
+      "behavior": "Holding Knees",
+      "description": "The woman in the video places both hands on her knees."
+    },
+    {
+      "timestamp": "00:51",
+      "behavior": "Holding Knees",
+      "description": "The woman in the video places both hands on her knees."
+    }
+  ]
+}
+``` 
+**Disclaimer:** I am an AI Chatbot and cannot provide a medical diagnosis of the behaviors in this video. Please seek a qualified professional for any health concerns. 
