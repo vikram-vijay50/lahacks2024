@@ -1,67 +1,42 @@
 ```json
 {
- "repeated_behaviors": [
-  {
-   "timestamp": "00:22",
-   "behavior": "Head Scratching",
-   "description": "The man in the video scratches his head with his right hand."
-  },
-  {
-   "timestamp": "00:31",
-   "behavior": "Body rocking",
-   "description": "The woman in the video rocks her body back and forth while sitting in a chair."
-  },
-  {
-   "timestamp": "00:33",
-   "behavior": "Leg touching",
-   "description": "The woman in the video touches her legs repeatedly."
-  },
-  {
-   "timestamp": "00:34",
-   "behavior": "Body rocking",
-   "description": "The woman in the video rocks her body side to side while sitting in a chair."
-  },
-  {
-   "timestamp": "00:36",
-   "behavior": "Hair fixing",
-   "description": "The woman in the video fixes her hair repeatedly."
-  },
-  {
-   "timestamp": "00:38",
-   "behavior": "Pacing",
-   "description": "The woman in the video paces around the room."
-  },
-  {
-   "timestamp": "00:39",
-   "behavior": "Body rocking",
-   "description": "The woman in the video rocks her body back and forth while standing."
-  },
-  {
-   "timestamp": "00:43",
-   "behavior": "Body rocking",
-   "description": "The woman in the video rocks her body side to side while standing."
-  },
-  {
-   "timestamp": "00:45",
-   "behavior": "Leg touching",
-   "description": "The woman in the video touches her legs repeatedly."
-  },
-  {
-   "timestamp": "00:46",
-   "behavior": "Head/Face touching",
-   "description": "The woman in the video touches her head and face repeatedly."
-  },
-  {
-   "timestamp": "00:49",
-   "behavior": "Body rocking",
-   "description": "The woman in the video rocks her body back and forth while sitting in a chair."
-  },
-  {
-   "timestamp": "00:51",
-   "behavior": "Leg touching",
-   "description": "The woman in the video touches her legs repeatedly."
-  }
- ]
+  "repeated_behaviors": [
+    {
+      "timestamp": "00:22",
+      "behavior": "Head Scratching",
+      "description": "The man in the video scratches his head with his right hand."
+    },
+    {
+      "timestamp": "00:31",
+      "behavior": "Bending Over",
+      "description": "The woman in the video bends over with her head between her knees."
+    },
+    {
+      "timestamp": "00:34",
+      "behavior": "Holding Lower Back",
+      "description": "The woman in the video places both of her hands on her lower back, as if she is in pain."
+    },
+    {
+      "timestamp": "00:39",
+      "behavior": "Bending Over",
+      "description": "The woman in the video bends over and touches her toes, as if she is stretching."
+    },
+    {
+      "timestamp": "00:43",
+      "behavior": "Holding Lower Back",
+      "description": "The woman in the video places both of her hands on her lower back, as if she is in pain."
+    },
+    {
+      "timestamp": "00:46",
+      "behavior": "Holding Head",
+      "description": "The woman in the video holds her head with both hands, as if she has a headache."
+    },
+    {
+      "timestamp": "00:50",
+      "behavior": "Bending Over",
+      "description": "The woman in the video bends over with her head between her knees."
+    }
+  ]
 }
-```
-Please note that this analysis is based on a limited amount of information and should not be taken as a diagnosis of any kind. If you are concerned about someone's behavior, please seek professional help. 
+``` 
+It's important to note that these behaviors may not necessarily be indicative of any underlying medical or psychological conditions. If you are concerned about someone's behavior, it's always best to consult with a qualified healthcare professional. 
