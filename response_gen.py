@@ -1,14 +1,11 @@
+
 import google.generativeai as genai
 import cv2
 import os
 import shutil
-from uagents.setup import fund_agent_if_low
-from uagents import Agent, Context, Model
-from typing import List
-from pydantic import BaseModel as PydanticBaseModel
 
-# GOOGLE_API_KEY = "AIzaSyAJaUSAbrHo_-RH-UuCof9NNvyHcYE40rU"
-# genai.configure(api_key=GOOGLE_API_KEY)
+GOOGLE_API_KEY = "AIzaSyAJaUSAbrHo_-RH-UuCof9NNvyHcYE40rU"
+genai.configure(api_key=GOOGLE_API_KEY)
 
 class File:
   def __init__(self, file_path: str, display_name: str = None):
@@ -19,16 +16,6 @@ class File:
 
   def set_file_response(self, response):
     self.response = response
-
-class BaseModel(PydanticBaseModel):
-    class Config:
-        arbitrary_types_allowed = True
-
-class Model(BaseModel):
-    x: File = None
-
-class Message(Model):
-    message: List[File]
 
 Safety_settings = [
     {
@@ -54,28 +41,6 @@ Safety_settings = [
 ]
 
 RECIPIENT_ADDRESS = "agent1qglnv7fjn6a9r73q27n9967ufckpjq0v3mrtsnu5adsypqesj495kndxx3a"
-
-gen_response_agent = Agent(
-    name="gen_response",
-    port=8001,
-    seed="gen response password",
-    endpoint=["http://127.0.0.1:8001/submit"],
-)
-
-fund_agent_if_low(gen_response_agent.wallet.address())
-print(gen_response_agent.address)
-
-def send_agent_message(agent, content):
-    # Construct the message
-    message = {
-        "sender": gen_response_agent.address,
-        "recipient": RECIPIENT_ADDRESS,
-        "content": content,
-        "type": "Notification"  # Adjust this to your message type
-    }
-
-    # Send the message
-    agent.send_message(message)
 
 video_file_name = "./uploaded_files/TouretteTics.mp4"
 model = None
@@ -188,9 +153,6 @@ def gen_response():
   output_json.writelines(response.text)
   output_json.close()
 
-  # Call the function to send a message
-  gen_response_agent._ctx.send(RECIPIENT_ADDRESS, Message(message=uploaded_files))
-
   global all_files
   all_files = uploaded_files
 
@@ -201,6 +163,3 @@ def delete_files(uploaded_files):
       genai.delete_file(file.response.name)
       print(f'Deleted {file.file_path} at URI {file.response.uri}')
     print(f"Completed deleting files!\n\nDeleted: {len(uploaded_files)} files")
-
-if __name__ == "__main__":
-  gen_response_agent.run()

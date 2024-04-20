@@ -1,28 +1,7 @@
 import google.generativeai as genai
 import response_gen
-from uagents.setup import fund_agent_if_low
-from uagents import Agent, Context, Model
-from typing import List
-from pydantic import BaseModel as PydanticBaseModel
 
 exit_key = 'q'
-
-class File:
-  def __init__(self, file_path: str, display_name: str = None):
-    self.file_path = file_path
-    if display_name:
-      self.display_name = display_name
-    self.timestamp = get_timestamp(file_path)
-
-  def set_file_response(self, response):
-    self.response = response
-
-class BaseModel(PydanticBaseModel):
-    class Config:
-        arbitrary_types_allowed = True
-
-class Model(BaseModel):
-    x: File = None
 
 Safety_settings = [
     {
@@ -47,26 +26,8 @@ Safety_settings = [
     },
 ]
 
-class Message(Model):
-    message: List[File]
-
 RECIPIENT_ADDRESS = "agent1qtvu3wpahhktw0hn55kpr5uvv7erjk5vv0w3ldm2y49n8x4hpfd07tydujm"
 all_files = []
-
-gemini_chat = Agent(
-    name="gemini_chat",
-    port=8001,
-    seed="gemini chat password",
-    endpoint=["http://127.0.0.1:8001/submit"],
-)
-
-fund_agent_if_low(gemini_chat.wallet.address())
-print(gemini_chat.address)
- 
-@gemini_chat.on_message(model=Message)
-async def get_files(ctx: Context, msg: Message):
-    global all_files
-    all_files = msg.message
 
 FRAME_PREFIX = "_frame"
 def get_timestamp(filename):
@@ -106,6 +67,3 @@ while True:
     # Process the user input
     print("Bot: ", send_message_user(model,all_files, user_input))
 response_gen.delete_files(all_files)
-
-if __name__ == "__main__":
-    gemini_chat.run()
