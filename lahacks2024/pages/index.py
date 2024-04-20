@@ -1,10 +1,15 @@
 """The home page of the app."""
 
+import subprocess
+import os
+import shutil
 from lahacks2024 import styles
 from lahacks2024.templates import template
 from lahacks2024 import *
 
 import reflex as rx
+
+import response_gen
 
 class State(rx.State):
     """The app state."""
@@ -18,6 +23,11 @@ class State(rx.State):
         Args:
             files: The uploaded files.
         """
+        # Clear the uploaded_files folder
+        uploaded_files_dir = rx.get_upload_dir()
+        shutil.rmtree(uploaded_files_dir, ignore_errors=True)
+        os.makedirs(uploaded_files_dir, exist_ok=True)
+        
         for file in files:
             upload_data = await file.read()
             outfile = rx.get_upload_dir() / file.filename
@@ -28,6 +38,8 @@ class State(rx.State):
 
             # Update the img var.
             self.img.append(file.filename)
+            
+        subprocess.run(["python", "response_gen.py"])
 
 color = "rgb(107,99,246)"
 

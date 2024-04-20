@@ -1,92 +1,67 @@
 ```json
 {
-  "repeated_behaviors": [
-    {
-      "timestamp": "00:22",
-      "behavior": "Head Scratching",
-      "description": "The man in the video scratches his head with his right hand."
-    },
-    {
-      "timestamp": "00:31",
-      "behavior": "Bending Forward",
-      "description": "The woman in the video bends forward at the waist."
-    },
-    {
-      "timestamp": "00:34",
-      "behavior": "Holding Lower Back",
-      "description": "The woman in the video places both hands on her lower back."
-    },
-    {
-      "timestamp": "00:35",
-      "behavior": "Rubbing Eyes",
-      "description": "The woman in the video rubs her eyes with her right hand."
-    }, 
-    {
-      "timestamp": "00:36",
-      "behavior": "Touching Hair",
-      "description": "The woman in the video touches her hair with her right hand."
-    },
-    {
-      "timestamp": "00:38",
-      "behavior": "Walking",
-      "description": "The woman walks across the room." 
-    },
-    {
-      "timestamp": "00:39",
-      "behavior": "Bending Forward",
-      "description": "The woman in the video bends forward at the waist."
-    },
-    {
-      "timestamp": "00:42",
-      "behavior": "Walking",
-      "description": "The woman walks across the room." 
-    },
-    {
-      "timestamp": "00:43",
-      "behavior": "Holding Lower Back",
-      "description": "The woman in the video places both hands on her lower back."
-    },
-    {
-      "timestamp": "00:44",
-      "behavior": "Holding Lower Back",
-      "description": "The woman in the video places both hands on her lower back."
-    },
-    {
-      "timestamp": "00:45",
-      "behavior": "Holding Knees",
-      "description": "The woman in the video places both hands on her knees."
-    },
-    {
-      "timestamp": "00:46",
-      "behavior": "Holding Knees",
-      "description": "The woman in the video places both hands on her knees."
-    },
-    {
-      "timestamp": "00:47",
-      "behavior": "Holding Head",
-      "description": "The woman places both hands on her head." 
-    },
-    {
-      "timestamp": "00:48",
-      "behavior": "Touching Hair",
-      "description": "The woman in the video touches her hair with her right hand." 
-    },
-    {
-      "timestamp": "00:49",
-      "behavior": "Bending Forward",
-      "description": "The woman in the video bends forward at the waist."
-    },
-    {
-      "timestamp": "00:50",
-      "behavior": "Holding Knees",
-      "description": "The woman in the video places both hands on her knees."
-    },
-    {
-      "timestamp": "00:51",
-      "behavior": "Holding Knees",
-      "description": "The woman in the video places both hands on her knees."
-    }
-  ]
+ "repeated_behaviors": [
+  {
+   "timestamp": "00:22",
+   "behavior": "Head Scratching",
+   "description": "The man in the video scratches his head with his right hand."
+  },
+  {
+   "timestamp": "00:31",
+   "behavior": "Body rocking",
+   "description": "The woman in the video rocks her body back and forth while sitting in a chair."
+  },
+  {
+   "timestamp": "00:33",
+   "behavior": "Leg touching",
+   "description": "The woman in the video touches her legs repeatedly."
+  },
+  {
+   "timestamp": "00:34",
+   "behavior": "Body rocking",
+   "description": "The woman in the video rocks her body side to side while sitting in a chair."
+  },
+  {
+   "timestamp": "00:36",
+   "behavior": "Hair fixing",
+   "description": "The woman in the video fixes her hair repeatedly."
+  },
+  {
+   "timestamp": "00:38",
+   "behavior": "Pacing",
+   "description": "The woman in the video paces around the room."
+  },
+  {
+   "timestamp": "00:39",
+   "behavior": "Body rocking",
+   "description": "The woman in the video rocks her body back and forth while standing."
+  },
+  {
+   "timestamp": "00:43",
+   "behavior": "Body rocking",
+   "description": "The woman in the video rocks her body side to side while standing."
+  },
+  {
+   "timestamp": "00:45",
+   "behavior": "Leg touching",
+   "description": "The woman in the video touches her legs repeatedly."
+  },
+  {
+   "timestamp": "00:46",
+   "behavior": "Head/Face touching",
+   "description": "The woman in the video touches her head and face repeatedly."
+  },
+  {
+   "timestamp": "00:49",
+   "behavior": "Body rocking",
+   "description": "The woman in the video rocks her body back and forth while sitting in a chair."
+  },
+  {
+   "timestamp": "00:51",
+   "behavior": "Leg touching",
+   "description": "The woman in the video touches her legs repeatedly."
+  }
+ ]
 }
-``` 
-**Disclaimer:** I am an AI Chatbot and cannot provide a medical diagnosis of the behaviors in this video. Please seek a qualified professional for any health concerns. 
+```
+Please note that this analysis is based on a limited amount of information and should not be taken as a diagnosis of any kind. If you are concerned about someone's behavior, please seek professional help. 
