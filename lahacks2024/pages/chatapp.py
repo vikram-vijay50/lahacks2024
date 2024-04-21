@@ -2,6 +2,7 @@ import asyncio
 import reflex as rx
 from lahacks2024 import styles
 from lahacks2024.state import ChatState
+from lahacks2024.templates import template
 
 def qa(question: str, answer: str) -> rx.Component:
     return rx.box(
@@ -36,8 +37,7 @@ def action_bar() -> rx.Component:
                   style=styles.button_style),
     )
 
-
-@rx.page(route="/chatapp", title="Chat App")
+@template(route="/chatapp", title="Chat App")
 def chatapp() -> rx.Component:
     return rx.center(
         rx.vstack(

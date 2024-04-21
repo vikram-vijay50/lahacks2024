@@ -43,5 +43,5 @@ class ChatState(rx.State):
         self.chat_history.append((self.question, response.text))
         
         self.question = ""
-        return response.text
+        yield
         
