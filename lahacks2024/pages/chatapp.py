@@ -33,7 +33,7 @@ def action_bar() -> rx.Component:
             on_change=ChatState.set_question,
             style=styles.input_style),
         rx.button("Ask", 
-                  on_click=ChatState.answer, 
+                  on_click=ChatState.answer(), 
                   style=styles.button_style),
     )
 

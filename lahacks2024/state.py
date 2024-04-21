@@ -39,9 +39,9 @@ class ChatState(rx.State):
         
         chat = model.start_chat(history=[])
         
+
         response = chat.send_message(self.question)
         self.chat_history.append((self.question, response.text))
         
         self.question = ""
         yield
-        
