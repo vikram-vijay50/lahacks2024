@@ -12,9 +12,11 @@ import shutil
 
 class State(rx.State):
     """The app state."""
-
     # The img to show.
     img: list[str]
+    
+    # uploaded_file name
+    filename: str
 
     async def handle_upload(self, files: list[rx.UploadFile]):
         directory_path = rx.get_upload_dir()

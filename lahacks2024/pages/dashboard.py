@@ -1,4 +1,6 @@
 """The dashboard page."""
+import os
+import time
 from lahacks2024.templates import template
 import json
 
@@ -53,9 +55,31 @@ def dashboard() -> rx.Component:
             ),
         )
     
-    # Read JSON content from the file
-    with open('./output_json/output_response.json', 'r') as json_file:
-        data = json.load(json_file)
+    # # Read JSON content from the file
+    # with open('./output_json/output_response.json', 'r') as json_file:
+    #     lines = json_file.readlines()
+    # json_content = ''.join(lines[1:-1])
+    # data = json.loads(json_content)
+    
+    file_path = './output_json/output_response.json'
+
+    # Check if the file exists, if not, wait until it does
+    while not os.path.exists(file_path):
+        print("Waiting for the file to appear...")
+        time.sleep(1)  # Wait for 1 second before checking again
+
+    # Once the file exists, proceed to read its content
+    with open(file_path, 'r') as json_file:
+        lines = json_file.readlines()
+
+    # Extract the content excluding the first and last lines
+    if len(lines) > 2:  # Ensure there are enough lines to ignore the first and last
+        json_content = ''.join(lines[1:-1])
+
+        # Load the JSON content
+        data = json.loads(json_content)
+    else:
+        print("File is empty or has insufficient lines.")
 
     # Update card_info in GridForEachState with the JSON data
     GridForEachState.update_card_info(data)

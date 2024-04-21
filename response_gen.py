@@ -40,9 +40,7 @@ Safety_settings = [
     },
 ]
 
-RECIPIENT_ADDRESS = "agent1qglnv7fjn6a9r73q27n9967ufckpjq0v3mrtsnu5adsypqesj495kndxx3a"
-
-video_file_name = "./uploaded_files/TouretteTics.mp4"
+video_file_name = "./uploaded_files/*"
 model = None
 all_files = []
 
@@ -135,7 +133,7 @@ def gen_response():
     print(f.uri)
 
   # Create the prompt.
-  prompt = """Please describe all changes in behaviors or abnormal behaviors in this video as thoroughly as possible and give the timestamp of when they occurred. 
+  prompt = """You are a faithful json producer. Please describe all changes in behaviors or abnormal behaviors in this video as thoroughly as possible and give the timestamp of when they occurred. 
               Return output in json format: {repeated_behaviors: [{timestamp: timestamp with : replacing _, behavior: repeated behavior, description: description of behavior}]}"""
 
   # Set the model to Gemini 1.5 Pro.

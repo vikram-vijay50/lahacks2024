@@ -14,23 +14,10 @@ def sidebar_header() -> rx.Component:
     return rx.hstack(
         # The logo.
         rx.color_mode_cond(
-            rx.image(src="/reflex_black.svg", height="2em"),
-            rx.image(src="/reflex_white.svg", height="2em"),
+            rx.image(src="/lightmodeicon.png", height="8em"),
+            rx.image(src="/lightmodeicon.png", height="8em"),
         ),
         rx.spacer(),
-        rx.link(
-            rx.button(
-                rx.icon("github"),
-                color_scheme="gray",
-                variant="soft",
-            ),
-            href="https://github.com/reflex-dev/reflex",
-        ),
-        align="center",
-        width="100%",
-        border_bottom=styles.border,
-        padding_x="1em",
-        padding_y="2em",
     )
 
 
