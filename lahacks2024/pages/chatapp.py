@@ -31,28 +31,11 @@ def action_bar() -> rx.Component:
             placeholder="Ask a question",
             on_change=ChatState.set_question,
             style=styles.input_style),
-        rx.button("Ask", on_click=ChatState.answer, style=styles.button_style),
+        rx.button("Ask", 
+                  on_click=ChatState.answer, 
+                  style=styles.button_style),
     )
-    
-async def answer(self):
-    # Our chatbot is not very smart right now...
-    answer = "I don't know!"
-    self.chat_history.append((self.question, ""))
 
-    # Clear the question input.
-    self.question = ""
-    # Yield here to clear the frontend input before continuing.
-    yield
-
-    for i in range(len(answer)):
-        # Pause to show the streaming effect.
-        await asyncio.sleep(0.1)
-        # Add one letter at a time to the output.
-        self.chat_history[-1] = (
-            self.chat_history[-1][0],
-            answer[: i + 1],
-        )
-        yield
 
 @rx.page(route="/chatapp", title="Chat App")
 def chatapp() -> rx.Component:
