@@ -4,35 +4,28 @@
     {
       "timestamp": "00:01:15",
       "behavior": "Head scratching",
-      "description": "The subject begins to scratch their head repeatedly, which could indicate confusion, discomfort, or anxiety."
+      "description": "The subject rapidly scratches their head with their right hand for approximately 5 seconds." 
     },
     {
-      "timestamp": "00:03:45",
+      "timestamp": "00:02:53",
       "behavior": "Pacing",
-      "description": "The subject starts pacing back and forth, suggesting restlessness or agitation." 
+      "description": "The subject begins pacing back and forth within a confined area for about 1 minute."
     },
     {
       "timestamp": "00:05:22",
-      "behavior": "Muttering",
-      "description": "The subject is observed muttering to themself, potentially indicating distress or disorientation."
-    } 
-  ],
-  "abnormal_behaviors": [
-    {
-      "timestamp": "00:02:58",
-      "behavior": "Sudden laughter",
-      "description": "The subject bursts into laughter without any apparent trigger, which could be a sign of emotional distress or a neurological issue."
+      "behavior": "Head scratching",
+      "description": "The subject again scratches their head, this time using their left hand and with less intensity compared to the first instance."
     },
     {
-      "timestamp": "00:04:31",
-      "behavior": "Talking to self in mirror",
-      "description": "The subject engages in a conversation with their reflection in the mirror, which might suggest a detachment from reality or a psychotic episode." 
+      "timestamp": "00:07:08",
+      "behavior": "Muttering", 
+      "description": "The subject appears to be muttering under their breath, although the exact words are indistinguishable."
     },
     {
-      "timestamp": "00:06:05",
-      "behavior": "Throwing objects",
-      "description": "The subject begins throwing objects around the room, indicating a loss of control or a potential outburst of anger." 
+      "timestamp": "00:07:08", 
+      "behavior": "Pacing",
+      "description": "The subject resumes pacing, covering a larger area than before and with increased speed."
     } 
-  ] 
-}
+  ]
+} 
 ``` 
