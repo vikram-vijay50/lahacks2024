@@ -4,6 +4,8 @@ import cv2
 import os
 import shutil
 
+import reflex as rx
+
 GOOGLE_API_KEY = "AIzaSyAJaUSAbrHo_-RH-UuCof9NNvyHcYE40rU"
 genai.configure(api_key=GOOGLE_API_KEY)
 
@@ -40,7 +42,9 @@ Safety_settings = [
     },
 ]
 
-video_file_name = "./uploaded_files/*"
+for fileName in os.listdir():
+  video_file_name = os.path.join(rx.get_upload_dir(), fileName)
+
 model = None
 all_files = []
 

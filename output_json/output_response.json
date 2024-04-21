@@ -3,29 +3,19 @@
   "repeated_behaviors": [
     {
       "timestamp": "00:01:15",
-      "behavior": "Head scratching",
-      "description": "The subject rapidly scratches their head with their right hand for approximately 5 seconds." 
+      "behavior": "Head Scratching",
+      "description": "The subject repeatedly scratches their head with their right hand for approximately 5 seconds. This could indicate confusion, uncertainty, or discomfort."
     },
     {
-      "timestamp": "00:02:53",
+      "timestamp": "00:03:42",
+      "behavior": "Leg Shaking",
+      "description": "The subject begins shaking their right leg up and down while seated. This behavior continues for about 2 minutes. Leg shaking can be a sign of anxiety, restlessness, or boredom."
+    },
+    {
+      "timestamp": "00:07:58",
       "behavior": "Pacing",
-      "description": "The subject begins pacing back and forth within a confined area for about 1 minute."
-    },
-    {
-      "timestamp": "00:05:22",
-      "behavior": "Head scratching",
-      "description": "The subject again scratches their head, this time using their left hand and with less intensity compared to the first instance."
-    },
-    {
-      "timestamp": "00:07:08",
-      "behavior": "Muttering", 
-      "description": "The subject appears to be muttering under their breath, although the exact words are indistinguishable."
-    },
-    {
-      "timestamp": "00:07:08", 
-      "behavior": "Pacing",
-      "description": "The subject resumes pacing, covering a larger area than before and with increased speed."
-    } 
+      "description": "The subject gets up and begins pacing back and forth across the room. This lasts for roughly 1 minute. Pacing often suggests nervousness, agitation, or impatience." 
+    }
   ]
 } 
 ``` 
