@@ -108,7 +108,7 @@ def menu_button() -> rx.Component:
 
 def chatButton() -> rx.Component:
     return rx.box(
-        rx.vstack(
+        rx.hstack(
             rx.button(
                     rx.icon("bot"), 
                     on_click=ChatState.changeShow
@@ -122,7 +122,6 @@ def chatButton() -> rx.Component:
             bottom="5em",
             z_index="500",
             ),
-
         )
 
 
