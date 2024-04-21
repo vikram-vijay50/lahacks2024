@@ -6,9 +6,16 @@ import google.generativeai as genai
 import response_gen
 
 class ChatState(rx.State):
+    # Question for chat app
     question: str
-    
+    # Chat history for chat app
     chat_history: list[tuple[str, str]]
+    
+    # Boolean for chat app hide/show
+    show: bool = False
+    
+    def changeShow(self):
+        self.show = not (self.show)
     
     async def answer(self):
         Safety_settings = [

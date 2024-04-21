@@ -6,6 +6,9 @@ from lahacks2024 import styles
 from lahacks2024.components.sidebar import sidebar
 from typing import Callable
 
+from lahacks2024.state import ChatState
+from lahacks2024.pages import chatapp
+
 import reflex as rx
 
 # Meta tags for the app.
@@ -16,6 +19,48 @@ default_meta = [
     },
 ]
 
+def qa(question: str, answer: str) -> rx.Component:
+    return rx.box(
+        rx.box(
+            rx.text(question, style=styles.question_style),
+            text_align="right",
+        ),
+        rx.box(
+            rx.text(answer, style=styles.answer_style),
+            text_align="left",
+        ),
+        margin_y="1em",
+    )
+
+def chat() -> rx.Component:
+    return rx.box(
+        rx.foreach(
+            ChatState.chat_history,
+            lambda messages: qa(messages[0], messages[1]),
+        )
+    )
+
+def action_bar() -> rx.Component:
+    return rx.hstack(
+        rx.input(
+            value=ChatState.question,
+            placeholder="Ask a question",
+            on_change=ChatState.set_question,
+            style=styles.input_style,
+            ),
+        rx.button("Ask", 
+                  on_click=ChatState.answer(), 
+                  style=styles.button_style),
+    )
+
+def chatapp() -> rx.Component:
+    return rx.center(
+        rx.vstack(
+            chat(),
+            action_bar(),
+            align="center",
+        )
+    )
 
 def menu_item_link(text, href):
     return rx.menu.item(
@@ -30,7 +75,6 @@ def menu_item_link(text, href):
             "background_color": styles.accent_text_color,
         },
     )
-
 
 def menu_button() -> rx.Component:
     """The menu button on the top right of the page.
@@ -54,8 +98,6 @@ def menu_button() -> rx.Component:
                     for page in get_decorated_pages()
                 ],
                 rx.menu.separator(),
-                menu_item_link("About", "https://github.com/reflex-dev"),
-                menu_item_link("Contact", "mailto:founders@=reflex.dev"),
             ),
         ),
         position="fixed",
@@ -63,6 +105,25 @@ def menu_button() -> rx.Component:
         top="2em",
         z_index="500",
     )
+
+def chatButton() -> rx.Component:
+    return rx.box(
+        rx.vstack(
+            rx.button(
+                    rx.icon("bot"), 
+                    on_click=ChatState.changeShow
+                ),
+            rx.cond(
+                ChatState.show,
+                chatapp(),
+                ),
+            position="fixed",
+            right="2em",
+            bottom="5em",
+            z_index="500",
+            ),
+
+        )
 
 
 class ThemeState(rx.State):
@@ -114,12 +175,12 @@ def template(
                     rx.vstack(
                         page_content(),
                         rx.spacer(),
-                        rx.logo(),
                         **styles.template_content_style,
                     ),
                     **styles.template_page_style,
                 ),
                 menu_button(),
+                chatButton(),
                 align="start",
                 background=f"radial-gradient(circle at top right, {rx.color('accent', 2)}, {rx.color('mauve', 1)});",
                 position="relative",
