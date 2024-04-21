@@ -5,6 +5,14 @@ import os
 import google.generativeai as genai
 import response_gen
 
+# Make GenerateContent request with the structure described above.
+def make_request(prompt, files):
+  request = [prompt]
+  for file in files:
+    request.append(file.timestamp)
+    request.append(file.response)
+  return request
+
 class ChatState(rx.State):
     # Question for chat app
     question: str
@@ -43,11 +51,12 @@ class ChatState(rx.State):
     
         model = genai.GenerativeModel(model_name="models/gemini-1.5-pro-latest", safety_settings=Safety_settings, generation_config=genai.GenerationConfig(
         temperature=0.9,))
+        all_files = response_gen.all_files
         
         chat = model.start_chat(history=[])
         
-
-        response = chat.send_message(self.question)
+        request = make_request(self.question, all_files)
+        response = chat.send_message(request)
         self.chat_history.append((self.question, response.text))
         
         self.question = ""

@@ -42,7 +42,7 @@ Safety_settings = [
     },
 ]
 
-for fileName in os.listdir():
+for fileName in os.listdir("./uploaded_files"):
   video_file_name = os.path.join(rx.get_upload_dir(), fileName)
 
 model = None
@@ -117,7 +117,7 @@ def gen_response():
   # Upload the files to the API
   # Only upload a 10 second slice of files to reduce upload time.
   # Change full_video to True to upload the whole video.
-  full_video = False
+  full_video = True
   file_start = 0
   file_end = 30
 
